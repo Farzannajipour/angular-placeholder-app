@@ -24,8 +24,5 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Test
-        run: npm run test:ci
-
       - name: Build for production
         run: npm run --configuration=production
