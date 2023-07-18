@@ -25,7 +25,7 @@ jobs:
         run: npm ci
 
       - name: Test
-        run: npm run test
+        run: CI=true npm run test
 
       - name: Build for production
         run: npm run --configuration=production

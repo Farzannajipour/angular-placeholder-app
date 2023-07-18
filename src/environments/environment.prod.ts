@@ -1,4 +1,4 @@
 export const environment = {
-  production: false,
-  appUrl: 'http://localhost:4200',
+  production: true,
+  appUrl: 'https://angular-placeholder-app.vercel.app/',
 };
