@@ -22,17 +22,18 @@ export class ItemCardComponent {
     return `square__content--${displayState}`;
   }
 
+  contentMappings: { [key: string]: keyof Item } = {
+    title: 'title',
+    userId: 'userId',
+    id: 'id',
+    body: 'body',
+  };
+
   getItemCardContent(item: Item, displayState: string | null): string {
-    if (displayState === 'title') {
-      return item.title;
-    } else if (displayState === 'userId') {
-      return item.userId.toString();
-    } else if (displayState === 'id') {
-      return item.id.toString();
-    } else if (displayState === 'body') {
-      return item.body;
-    } else {
-      return '';
+    if (displayState) {
+      const contentKey = this.contentMappings[displayState];
+      return item[contentKey].toString();
     }
+    return '';
   }
 }
