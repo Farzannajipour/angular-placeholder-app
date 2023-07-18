@@ -8,6 +8,8 @@ import { UserIdDisplayStateStrategy } from './user-id-display-state';
 @Injectable({
   providedIn: 'root',
 })
+
+// This service is used to determine the next display state for an item, based on the strategy pattern
 export class DisplayStateService {
   private strategies: { [key: string]: DisplayStateStrategy } = {
     title: new TitleDisplayStateStrategy(),

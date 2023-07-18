@@ -5,9 +5,15 @@
   <div class="grid">
     <ng-container *ngFor="let item of items$ | async">
       <div class="item-card">
-        <app-item-card [item]="item" [displayState]="getDisplayState(item.id) | async"></app-item-card>
+        <app-item-card
+          [item]="item"
+          [displayState]="getDisplayState(item.id) | async"
+        ></app-item-card>
       </div>
     </ng-container>
-    <div class="error" *ngIf="error$ | async as error" role="alert">{{ error }}</div>
-  </div>  
+    <!-- using the async pipe to prevent memory leaks -->
+    <div class="error" *ngIf="error$ | async as error" role="alert">
+      {{ error }}
+    </div>
+  </div>
 </ng-template>

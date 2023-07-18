@@ -12,7 +12,10 @@ export class ItemService {
   private cachedItems: Item[] = [];
 
   constructor(private http: HttpClient) {}
-
+  /**
+   * I used a cache here to avoid making multiple calls to the API
+   * // TODO - retry logic
+   */
   getItems(): Observable<Item[]> {
     if (this.cachedItems.length > 0) {
       return of(this.cachedItems);

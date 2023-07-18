@@ -22,6 +22,7 @@ export class ItemCardComponent {
     return `square__content--${displayState}`;
   }
 
+  // This is a mapping of the display state to the item property, helpful for close to modify and open to extend
   contentMappings: { [key: string]: keyof Item } = {
     title: 'title',
     userId: 'userId',
