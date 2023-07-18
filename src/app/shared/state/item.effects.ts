@@ -15,7 +15,9 @@ export class ItemEffects {
       mergeMap(() =>
         this.itemService.getItems().pipe(
           map((items) => ItemActions.fetchItemsSuccess({ items })),
-          catchError((error) => of(ItemActions.fetchItemsFailure({ error: error.message })))
+          catchError((error) =>
+            of(ItemActions.fetchItemsFailure({ error: error.message }))
+          )
         )
       )
     )
