@@ -3,7 +3,7 @@
 This project is built using Angular, Playwright, ngrx, and follows the BEM methodology. It includes unit tests and end-to-end tests. This application uses `https://jsonplaceholder.typicode.com` to fetch data.
 
 The application is deployed and accessible at the following URL:
-`https://angular-placeholder-app.vercel.app/`
+[https://angular-placeholder-app.vercel.app/](https://angular-placeholder-app.vercel.app/)
 
 ## Getting Started
 
