@@ -1,27 +1,36 @@
-# AngularPlaceholderApp
+# Angular placeholder project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+This project is built using Angular, Playwright, ngrx, and follows the BEM methodology. It includes unit tests and end-to-end tests. This application uses `https://jsonplaceholder.typicode.com` to fetch data.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Prerequisites
 
-## Code scaffolding
+- Node.js and npm
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running the Project
 
-## Build
+To run the project locally, follow these steps:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Install the necessary dependencies by running the command: `npm install`
+2. Start the development server by running the command: `ng serve`
+3. Navigate to `http://localhost:4200/` in your web browser.
 
-## Running unit tests
+## Running Unit Tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To execute the unit tests for this project, you can use Karma. Run the following command:
 
-## Running end-to-end tests
+```shell
+ng test
+```
+This will run the unit tests and provide you with the test results.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Running End-to-End Tests
+To execute the end-to-end tests for this project, you will need to add a package that implements end-to-end testing capabilities. Once you have added the appropriate package, you can run the following command:
 
-## Further help
+```shell
+ng e2e
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Continuous Integration with GitHub Actions
+
+This project utilizes GitHub Actions for continuous integration. The workflow configuration can be found in the `.github/workflows` directory.

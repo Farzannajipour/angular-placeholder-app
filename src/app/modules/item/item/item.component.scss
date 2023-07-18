@@ -1,0 +1,35 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+
+  .item-card {
+    flex: 1 0 calc(10% - 1rem);
+    max-width: calc(10% - 1rem);
+    @media (max-width: 1200px) {
+      flex: 1 0 calc(20% - 1rem);
+      max-width: calc(20% - 1rem);
+    }
+
+    @media (max-width: 768px) {
+      flex: 1 0 calc(50% - 1rem);
+      max-width: calc(50% - 1rem);
+    }
+  }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 2rem;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

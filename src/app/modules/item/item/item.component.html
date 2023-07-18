@@ -1,0 +1,13 @@
+<ng-container *ngIf="loading$ | async; else itemsContent">
+  <div class="loading-spinner" role="status" aria-live="polite">🌀</div>
+</ng-container>
+<ng-template #itemsContent>
+  <div class="grid">
+    <ng-container *ngFor="let item of items$ | async">
+      <div class="item-card">
+        <app-item-card [item]="item" [displayState]="getDisplayState(item.id) | async"></app-item-card>
+      </div>
+    </ng-container>
+    <div class="error" *ngIf="error$ | async as error" role="alert">{{ error }}</div>
+  </div>  
+</ng-template>

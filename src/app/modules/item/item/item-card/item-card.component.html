@@ -1,0 +1,8 @@
+<div class="square" (click)="toggleDisplay(item.id)" tabindex="0" role="button">
+  <ng-container *ngIf="displayState">
+    <div [ngClass]="displayStateToClass(displayState)">
+      <div class="label">{{ displayState.toUpperCase() }}:</div>
+      <div class="content">{{ getItemCardContent(item, displayState) }}</div>
+    </div>
+  </ng-container>
+</div>
