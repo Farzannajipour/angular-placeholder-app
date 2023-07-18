@@ -1,5 +1,6 @@
 import { test, expect, PlaywrightTestConfig } from '@playwright/test';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
+
 
 const appUrl = environment.appUrl;
 const testData = [
